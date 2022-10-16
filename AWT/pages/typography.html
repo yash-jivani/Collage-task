@@ -59,5 +59,60 @@
     <span>"Silver Oak"</span> <br/>
     <span>Silver &nbsp; &nbsp; &nbsp; &nbsp; Oak</span>
     <pre>Silver     Oak</pre>
+    <script>
+    var array_content = document.getElementById("array_content");
+    var push_item = document.getElementById("push_item");
+    var array = ["sandip","patel",20,"male","ahmedabad"];
+    var btn_push = document.getElementById("btn_push");
+    var btn_pop= document.getElementById("btn_pop");
+    var unshift_item = document.getElementById("unshift_item");
+    var btn_unshift = document.getElementById("btn_unshift");
+    var btn_shift = document.getElementById("btn_shift");
+    var btn_sort = document.getElementById("btn_sort");
+    var btn_reverse = document.getElementById("btn_reverse");
+    var merge = document.getElementById("merge");
+    var btn_merge = document.getElementById("btn_merge");
+    var array_merge = document.getElementById("array_merge");
+    
+    array_content.value = array;
+    btn_push.addEventListener("click", ()=>{
+    array.push(push_item.value);
+    array_content.value = array;
+    });
+    
+    btn_pop.addEventListener("click" , ()=>{
+    array.pop();
+    array_content.value = array; 
+    });
+    
+    btn_unshift.addEventListener("click" , ()=>{
+    array.unshift(unshift_item.value);
+    array_content.value = array 
+    })
+    
+    btn_shift.addEventListener("click" , ()=>{
+    array.shift();
+    array_content.value = array; 
+    })
+    
+    btn_sort.addEventListener("click", ()=>{
+    array.sort();
+    array_content.value = array; })
+    
+    btn_reverse.addEventListener("click", ()=>{
+    array.reverse();
+    array_content.value = array; }) 
+    
+    var data = ["mahesh","panchal",25,"male"];
+    merge.value = data;
+    
+    btn_merge.addEventListener("click",()=>{
+        var merge_data = array.concat(data);
+        array_merge.value = merge_data;
+    })
+    
+    
+    </script>
+    
 </body>
 </html>
